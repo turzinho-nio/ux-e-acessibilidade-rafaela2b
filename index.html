@@ -1,11 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Página sobre UX e acessibilidade com exemplos de interfaces inclusivas e práticas de desenvolvimento acessível."
+    />
+    <title>UX e acessibilidade | Interfaces inclusivas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="#" aria-label="Página inicial de UX e acessibilidade">Acessibilidade+UX</a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="#principios">Princípios</a>
+          <a href="#checagem">Checklist</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <button id="contrastToggle" class="contrast-toggle" type="button" aria-pressed="false">
+          Ativar alto contraste
+        </button>
+      </div>
+    </header>
+
+    <main id="conteudo-principal">
+      <section class="hero">
+        <div class="container hero-content">
+          <div>
+            <p class="eyebrow">UX e acessibilidade</p>
+            <h1>Interfaces inclusivas para todos os usuários</h1>
+            <p class="hero-copy">
+              Uma boa experiência começa com clareza, respeito às diferenças e uma navegação simples.
+              Aqui você encontra práticas essenciais para criar produtos que sejam úteis, compreensíveis e acessíveis.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#checagem">Ver checklist</a>
+              <a class="button secondary" href="#principios">Conhecer os princípios</a>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Resumo das boas práticas">
+            <h2>O que uma interface acessível oferece</h2>
+            <ul>
+              <li>Texto claro e estrutura lógica</li>
+              <li>Contraste suficiente para leitura</li>
+              <li>Elementos operáveis por teclado</li>
+              <li>Feedback claro para cada ação</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="principios" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Princípios</p>
+            <h2>Quatro pilares para uma experiência inclusiva</h2>
+            <p>
+              A acessibilidade não é um detalhe extra: ela melhora a compreensão, a usabilidade e a satisfação do público.
+            </p>
+          </div>
+
+          <div class="card-grid">
+            <article class="card">
+              <h3>Perceptível</h3>
+              <p>Informações e componentes devem ser apresentados de forma clara, com contraste adequado e conteúdo alternativo.</p>
+            </article>
+            <article class="card">
+              <h3>Operável</h3>
+              <p>Todos os recursos precisam funcionar com teclado, sem depender de interação complexa ou movimentos precisos.</p>
+            </article>
+            <article class="card">
+              <h3>Compreensível</h3>
+              <p>A linguagem, a navegação e as mensagens devem ser simples, previsíveis e fáceis de entender.</p>
+            </article>
+            <article class="card">
+              <h3>Robusto</h3>
+              <p>O conteúdo deve funcionar bem em diferentes tecnologias, incluindo leitores de tela e dispositivos variados.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="checagem" class="section alt-section">
+        <div class="container two-column">
+          <div>
+            <p class="eyebrow">Checklist</p>
+            <h2>Checklist rápido para revisar sua interface</h2>
+            <ul class="checklist">
+              <li>Use títulos e subtítulos em ordem lógica para facilitar a leitura.</li>
+              <li>Garanta contraste suficiente entre texto e fundo.</li>
+              <li>Inclua rótulos claros em campos de formulário e botões.</li>
+              <li>Ofereça foco visível para elementos interativos.</li>
+              <li>Mantenha mensagens de erro e sucesso objetivas.</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Exemplo de formulário acessível</h3>
+            <form class="access-form" novalidate>
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" required />
+
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+              <button class="button primary" type="submit">Enviar</button>
+              <p id="formStatus" class="form-status" role="status" aria-live="polite" hidden></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="section">
+        <div class="container">
+          <div class="cta-box">
+            <h2>Pequenas melhorias fazem uma grande diferença</h2>
+            <p>Ao pensar na inclusão desde o início, você cria produtos mais úteis, claros e acolhedores para todos.</p>
+            <a class="button primary" href="#">Voltar ao topo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Acessibilidade+UX. Criado para inspirar interfaces mais inclusivas.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
